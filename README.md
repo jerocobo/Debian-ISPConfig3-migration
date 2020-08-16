@@ -1,33 +1,43 @@
 Debian-ISPConfig3-migration
 ===========================
 
-Dieses Script Dient zur Migration von ISPConfig 3 Daten.
+Este script se utiliza para migrar datos de ISPConfig 3.
 
-Bitte beachten Sie, dass die Dokumentation noch enwenig dauert.
+Este script está basado en el desarrollado por teris.
 
-Gern bin ich bereit, fragen jederzeit zu beantworten.
+El script está basado en shell y se puede utilizar en cualquier servidor GNU de Ubuntu / Debian.
+El script se probó en Debian Wheezy (7).
 
-Das Script ist auf shell basis und kann auf jedem Ubuntu / Debian GNU server genutzt werden.
-Script wurde unter Debian Wheezy (7) getestet.
+Tenga en cuenta que las contraseñas de usuario / grupos y UNIX deben insertarse manualmente.
 
-Für ein Feedback würde ich mich freuen.
-Bitte beachtet, dass die User / Groups und UNIX-Kennwörter manuell eingefügt werden müssen.
+Los datos de acceso se guardarán del servidor anterior. Se encuentra en el directorio / root / old-server /.
+(passwd y grupo)
 
-Es werden vom alten Server die Zugangsdaten gespeichert. Dies befindet sich unter dem Verzeichnis /root/old-server/.
-(passwd und group)
-Die Originale findet Ihr unter /etc/passwd und /etc/group. Diese einfach mit einem editor bearbeiten (vi oder nano)
-Beispiel:
-cat /root/old-server/passwd
-Ausgabe:
-replicator:x:1002:1002:,,,:/home/replicator:/bin/bash
-Dies einfach kopieren und in die originale einspeichern:
-nano /etc/passwd
-root:x:0:0:root:/root:/bin/bash
-replicator:x:1000:1000:,,,:/home/replicator:/bin/bash
-FERTIG!
+Los originales se pueden encontrar en / etc / passwd y / etc / group. Simplemente edítelos con un editor (vi o nano)
+
+Ejemplo:
+
+cat / root / old-server / passwd
+
+Salida:
+
+replicador: x: 1002: 1002: ,,,: / home / replicator: / bin / bash
+
+Simplemente copie esto y guárdelo en el original:
+
+nano / etc / passwd
+
+root: x: 0: 0: root: / root: / bin / bash
+
+replicador: x: 1000: 1000: ,,,: / home / replicator: / bin / bash
+
+¡TERMINADO!
 
 
-Download...
-Entzip...
+Descargar ...
+
+Descomprimir ...
+
 chmod 0777
-starten!
+
+¡empezar!
